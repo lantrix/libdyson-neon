@@ -215,6 +215,11 @@ class DysonAccount:
         """Get device info from cloud account."""
         return self._auth_info['token']
 
+    def api_account_id(self) -> str:
+        self.provision_api()
+        """Get device info from cloud account."""
+        return self._auth_info['account']
+
 class DysonAccountCN(DysonAccount):
     """Dyson account in Mainland China."""
 

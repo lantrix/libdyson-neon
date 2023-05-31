@@ -29,7 +29,9 @@ else:
 
 devices = account.devices()
 token = account.api_token()
+account= account.api_account_id()
 print()
+print(f"Account ID: {account}")
 print(f"Bearer Token: {token}")
 for device in devices:
     print()
