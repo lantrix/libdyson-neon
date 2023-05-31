@@ -28,6 +28,9 @@ else:
     exit(1)
 
 devices = account.devices()
+token = account.api_token()
+print()
+print(f"Bearer Token: {token}")
 for device in devices:
     print()
     print(f"Serial: {device.serial}")

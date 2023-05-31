@@ -210,6 +210,10 @@ class DysonAccount:
             devices.append(DysonDeviceInfo.from_raw(raw))
         return devices
 
+    def api_token(self) -> str:
+        self.provision_api()
+        """Get device info from cloud account."""
+        return self._auth_info['token']
 
 class DysonAccountCN(DysonAccount):
     """Dyson account in Mainland China."""
